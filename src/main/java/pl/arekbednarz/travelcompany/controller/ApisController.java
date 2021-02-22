@@ -68,7 +68,7 @@ public class ApisController {
 //        the day is only needed when I'm looking for the weather
         int timeAll = 0;
         List<Long> timeList = apiService.shortestDistanceByBus(source, destination, day, time);
-        for (int i = 0; i < timeList.size() - 1; i++) {
+        for (int i = 0; i < timeList.size(); i++) {
             timeAll += timeList.get(i);
         }
         TravelTimeWalkandBikeAndShortestBusJSON json = new TravelTimeWalkandBikeAndShortestBusJSON(timeAll);

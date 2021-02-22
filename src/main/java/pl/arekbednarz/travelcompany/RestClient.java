@@ -47,57 +47,6 @@ public class RestClient {
         return new Gson().fromJson(readerGeoApi, GeoApi.class);
     }
 
-    public static void main(String[] args) throws IOException {
-//        URL urlGeoApi = new URL("http://resources.codeconcept.pl/api/distance");
-//        InputStreamReader readerGeoApi = new InputStreamReader(urlGeoApi.openStream());
-//        GeoApi geoApi = new Gson().fromJson(readerGeoApi, GeoApi.class);
-//
-//
-//        Optional<Distance> cityStop = geoApi.getDistances().stream()
-//                .filter(distance -> distance.getDestination().equals("Warszawa"))
-//                .min(Comparator.comparingDouble(Distance::getDistance));
-//
-//        List<Distance> travelfromFirstToStop = geoApi.getDistances().stream()
-//                .filter(distance -> distance.getSource().equals("Krakow") && distance.getDestination().equals(cityStop.get().getSource()))
-//                .collect(Collectors.toList());
-//
-//        List<Distance> travelFromStopToEnd = geoApi.getDistances().stream()
-//                .filter(distance -> distance.getSource().equals(cityStop.get().getSource()) && distance.getDestination().equals("Warszawa"))
-//                .collect(Collectors.toList());
-//
-//        int dist= 0;
-//        for (Distance s :travelfromFirstToStop) {
-//           dist+= s.getDistance();
-//            for (Distance d:travelFromStopToEnd) {
-//                dist+=d.getDistance();
-//
-//            }
-//
-//        }
-//
-//        URL urlSpeedApi = new URL("http://resources.codeconcept.pl/api/timetable");
-//        InputStreamReader readerSpeedApi = new InputStreamReader(urlSpeedApi.openStream());
-//        SpeedApi speedApi = new Gson().fromJson(readerSpeedApi, SpeedApi.class);
-//
-//
-//        Map<Long,Travel> arriveTime = new HashMap<>();
-//
-//            List<List<Travel>> travelList= speedApi.getTimetable().stream().filter(d->d.getSource().equals("Krakow") && d.getDestination().equals("Poznan"))
-//                    .map(Timetable::getTravels)
-//                    .collect(Collectors.toList());
-//
-//        for (List<Travel> t : travelList){
-//               for (Travel bus: t){
-//                   Duration duration = Duration.between(LocalTime.parse(bus.getDepartureTime()),LocalTime.parse(bus.getDestinationTime()));
-//                   arriveTime.put(duration.toMinutes(),bus);
-//               }
-//            System.out.println(arriveTime);
-//        }
-
-
-        }
-
-
 
         }
 
